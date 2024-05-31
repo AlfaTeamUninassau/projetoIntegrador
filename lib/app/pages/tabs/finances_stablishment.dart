@@ -41,7 +41,7 @@ class _FinancesStablishmentState extends State<FinancesStablishment> {
                   Column(
                     children: [
                       const Text(
-                        "Rascunh da Tela Financeira Diária do App",
+                        "Tela Financeira Diária do App",
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
