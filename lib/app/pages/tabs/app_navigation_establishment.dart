@@ -5,6 +5,7 @@ import 'package:ijato/app/pages/tabs/schedule_establishment.dart';
 import 'package:ijato/app/pages/tabs/services_establishment.dart';
 import 'package:ijato/app/pages/tabs/finances_establishment.dart';
 import 'package:ijato/app/pages/tabs/requests_establishment.dart';
+import 'package:ijato/app/pages/tabs/single_client_services.dart';
 
 import 'package:provider/provider.dart';
 import 'package:ijato/app/shared/navigation_provider.dart';
@@ -26,6 +27,7 @@ class _AppNavigationEstablishmentState
     const ServicesEstablishment(),
     const FinancesEstablishment(),
     const RequestsEstablishment(),
+    const SingleClientServices(),
   ];
 
   @override
