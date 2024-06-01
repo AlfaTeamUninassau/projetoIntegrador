@@ -129,7 +129,7 @@ class _ExpandableCardState extends State<ExpandableCard> {
                           textName: 'Serviço: ${widget.schedule.schedule}'),
                     ],
                   ),
-                  const SizedBox(width: 40),
+                  const SizedBox(width: 20),
                   Column(
                     children: [
                       if (widget.schedule.status == ScheduleStatus.available ||
