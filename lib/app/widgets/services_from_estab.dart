@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ServicesFromEstab extends StatelessWidget {
   final List<Map<String, String>> services;
 
-  const ServicesFromEstab({Key? key, required this.services}) : super(key: key);
+  const ServicesFromEstab({super.key, required this.services});
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +15,9 @@ class ServicesFromEstab extends StatelessWidget {
             return Padding(
               padding: const EdgeInsets.symmetric(vertical: 0.001),
               child: Card(
-                color: Color.fromRGBO(110, 112, 128, 1),
+                color: const Color.fromRGBO(110, 112, 128, 1),
                 child: ListTile(
-                  contentPadding: EdgeInsets.all(8.0),
+                  contentPadding: const EdgeInsets.all(8.0),
                   title: Text(
                     service['title']!,
                     style: const TextStyle(
@@ -43,7 +43,7 @@ class ServicesFromEstab extends StatelessWidget {
                         "Situação: ${service['status']!}",
                         style: TextStyle(
                           color: service['status'] == 'Pago'
-                              ? Color.fromARGB(255, 31, 94, 36)
+                              ? const Color.fromARGB(255, 31, 94, 36)
                               : Colors.yellow,
                           fontSize: 14,
                         ),

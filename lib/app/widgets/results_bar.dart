@@ -83,12 +83,12 @@ class ResultsBar extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(width: 11),
+                        const SizedBox(width: 11),
                         avaliation,
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
-                        Icon(
+                        const Icon(
                           Icons.local_car_wash,
                           size: 24,
                         )

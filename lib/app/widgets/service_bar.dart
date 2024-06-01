@@ -18,7 +18,7 @@ class Week extends StatelessWidget {
       ),
       child: Text(
         days,
-        style: TextStyle(color: Colors.black, fontSize: 8),
+        style: const TextStyle(color: Colors.black, fontSize: 8),
         textAlign: TextAlign.center,
       ),
     );

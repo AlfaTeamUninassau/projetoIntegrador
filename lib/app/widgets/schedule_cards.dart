@@ -203,7 +203,7 @@ class _ExpandableCardState extends State<ExpandableCard> {
                                 child: const Text(
                                   'iniciar',
                                   textAlign: TextAlign.center,
-                                  style: const TextStyle(color: Colors.white),
+                                  style: TextStyle(color: Colors.white),
                                 ),
                               ),
                             ],
