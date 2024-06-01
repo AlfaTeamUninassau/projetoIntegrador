@@ -99,7 +99,9 @@ class ChekBoxScheduling extends StatelessWidget {
             width: 104,
             height: 20,
             decoration: BoxDecoration(
-                color: available ? Colors.green : Colors.grey,
+                color: available
+                    ? const Color.fromRGBO(61, 92, 47, 1)
+                    : Colors.grey,
                 borderRadius: BorderRadius.circular(5)),
             child: Center(
               child: Text(

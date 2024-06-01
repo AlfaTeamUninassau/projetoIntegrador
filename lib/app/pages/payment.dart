@@ -56,7 +56,7 @@ class Payment extends StatelessWidget {
                             borderRadius: BorderRadius.circular(5),
                           ),
                           child: Column(
-                            children: [serviceMain()],
+                            children: [ServicesMainContainer()],
                           ),
                         ),
                         SizedBox(

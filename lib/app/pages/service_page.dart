@@ -3,6 +3,7 @@ import 'package:ijato/app/shared/app_routes.dart';
 import 'package:ijato/app/widgets/appbar_home.dart';
 import 'package:ijato/app/widgets/avatar.dart';
 import 'package:ijato/app/widgets/logo.dart';
+import 'package:ijato/app/widgets/scheduling.dart';
 import 'package:ijato/app/widgets/services_main_container.dart';
 import 'package:ijato/app/widgets/user_buttons.dart';
 
@@ -11,6 +12,7 @@ class ServicePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final serviceDescription = [];
     return Scaffold(
       body: Stack(
         children: [
@@ -56,7 +58,41 @@ class ServicePage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(5),
                           ),
                           child: Column(
-                            children: [serviceMain()],
+                            children: [
+                              ServicesMainContainer(),
+                              ChekBoxScheduling(
+                                  hour: '07:00 as 0:900', available: true),
+                              Text(
+                                'Escolha o Serviço',
+                                style: TextStyle(
+                                    fontSize: 14, fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(
+                                height: 8,
+                              ),
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(5)),
+                                width: 388,
+                                padding: EdgeInsets.only(
+                                  right: 7,
+                                  left: 7,
+                                  top: 13,
+                                  bottom: 9,
+                                ),
+                                child: Column(
+                                  children: [
+                                    ServiceChekBox(
+                                      serviceDescription:
+                                          'Deixe que um funcionário pegue o seu veículo em sua casa, sem se preocupar em ir ao local pessoalmente.',
+                                      serviceName: 'Leva e traz',
+                                      price: '50',
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
                           ),
                         ),
                         SizedBox(

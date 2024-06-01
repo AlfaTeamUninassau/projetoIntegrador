@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:ijato/app/widgets/avaliation.dart';
+import 'package:ijato/app/widgets/check_box.dart';
 import 'package:ijato/app/widgets/scheduling.dart';
 import 'package:ijato/app/widgets/service_bar.dart';
 
-class serviceMain extends StatelessWidget {
-  const serviceMain({super.key});
+class ServicesMainContainer extends StatelessWidget {
+  const ServicesMainContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,8 +34,83 @@ class serviceMain extends StatelessWidget {
         SizedBox(
           height: 15,
         ),
-        ChekBoxScheduling(hour: '06:00 - 07:00', available: true)
       ],
+    );
+  }
+}
+
+class ServiceChekBox extends StatelessWidget {
+  final String serviceName;
+  final String serviceDescription;
+  final String price;
+
+  const ServiceChekBox({
+    required this.price,
+    required this.serviceDescription,
+    Key? key,
+    required this.serviceName,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 374,
+      decoration: BoxDecoration(
+        color: Colors.grey,
+        borderRadius: BorderRadius.circular(5),
+      ),
+      padding: EdgeInsets.only(right: 7, left: 17, top: 6, bottom: 11),
+      child: Row(
+        children: [
+          CheckBox(), // Seu widget CheckBox aqui
+          SizedBox(
+              width: 10), // Adicione um espaçamento entre o CheckBox e o texto
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  serviceName,
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                ),
+                SizedBox(height: 5), // Adicione um espaçamento entre os textos
+                Text(
+                  serviceDescription,
+                  style: TextStyle(fontSize: 10),
+                  softWrap:
+                      true, // Permitir que o texto quebre em várias linhas
+                  overflow: TextOverflow
+                      .fade, // Caso o texto seja maior que o contêiner, ele desaparecerá gradualmente
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            width: 16,
+          ),
+          Container(
+            padding: EdgeInsetsDirectional.only(top: 6, bottom: 6),
+            width: 56,
+            height: 57,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(5),
+            ),
+            child: Column(
+              children: [
+                Icon(
+                  Icons.attach_money,
+                  color: Colors.green,
+                ),
+                Text(
+                  price,
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
