@@ -14,8 +14,8 @@ class ResearchField extends StatelessWidget {
         decoration: InputDecoration(
           labelText: label,
           suffixIcon: const Icon(Icons.search),
-          focusedBorder:
-              const OutlineInputBorder(borderSide: BorderSide(color: Colors.blue)),
+          focusedBorder: const OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.blue)),
           border: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(7))),
           fillColor: Colors.black26,

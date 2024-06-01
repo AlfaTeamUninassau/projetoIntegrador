@@ -18,8 +18,7 @@ import 'package:ijato/app/pages/tabs/services_establishment.dart';
 import 'package:ijato/app/pages/tabs/finances_establishment.dart';
 import 'package:ijato/app/pages/tabs/requests_establishment.dart';
 
-import 'pages/register.dart';
-
+import 'pages/register.dart'
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
 

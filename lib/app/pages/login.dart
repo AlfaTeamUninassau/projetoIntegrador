@@ -11,7 +11,6 @@ import 'package:ijato/app/widgets/check_box.dart';
 import 'package:ijato/app/widgets/button_primary.dart';
 
 import 'package:provider/provider.dart';
-
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
