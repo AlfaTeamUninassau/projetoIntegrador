@@ -4,12 +4,12 @@ import 'package:ijato/app/widgets/service_bar.dart';
 import 'package:ijato/app/widgets/avaliation.dart';
 
 class ResultsBar extends StatelessWidget {
-  String establishmentName;
-  Avaliation avaliation;
-  ServiceBar serviceBar;
-  Color barColor;
+  final String establishmentName;
+  final Avaliation avaliation;
+  final ServiceBar serviceBar;
+  final Color barColor;
 
-  ResultsBar({
+  const ResultsBar({
     required this.establishmentName,
     required this.avaliation,
     required this.serviceBar,

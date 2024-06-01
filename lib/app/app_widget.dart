@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ijato/app/controllers/schedule_controller.dart';
 import 'package:ijato/app/controllers/solicitation_controller.dart';
 import 'package:ijato/app/pages/tabs/profile_establishment.dart';
 import 'package:provider/provider.dart';
@@ -29,6 +30,7 @@ class AppWidget extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => UserController()),
         ChangeNotifierProvider(create: (_) => SolicitationController()),
+        ChangeNotifierProvider(create: (_) => ScheduleController()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

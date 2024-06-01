@@ -74,31 +74,31 @@ class HomeEstablishment extends StatelessWidget {
                                 ),
                                 weekDays: Week(
                                   days: "D",
-                                  openday: Colors.grey,
+                                  openDay: Colors.grey,
                                 ),
                                 weekDays1: Week(
                                   days: "S",
-                                  openday: Colors.green,
+                                  openDay: Colors.green,
                                 ),
                                 weekDays2: Week(
                                   days: "T",
-                                  openday: Colors.green,
+                                  openDay: Colors.green,
                                 ),
                                 weekDays3: Week(
                                   days: "Q",
-                                  openday: Colors.green,
+                                  openDay: Colors.green,
                                 ),
                                 weekDays4: Week(
                                   days: "Q",
-                                  openday: Colors.green,
+                                  openDay: Colors.green,
                                 ),
                                 weekDays5: Week(
                                   days: "S",
-                                  openday: Colors.green,
+                                  openDay: Colors.green,
                                 ),
                                 weekDays6: Week(
                                   days: "S",
-                                  openday: Colors.grey,
+                                  openDay: Colors.grey,
                                 ),
                               ),
                             ),
@@ -179,8 +179,8 @@ class HomeEstablishment extends StatelessWidget {
                           ],
                         ),
                         const SizedBox(height: 5),
-                        ServicesFromEstab(
-                            services: services),                      ],
+                        ServicesFromEstab(services: services),
+                      ],
                     ),
                   ),
                 ],
