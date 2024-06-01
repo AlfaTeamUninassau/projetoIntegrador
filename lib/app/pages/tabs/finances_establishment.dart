@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fl_chart/fl_chart.dart'; // Certifique-se de importar esta linha
+import 'package:fl_chart/fl_chart.dart';
+import 'package:intl/intl.dart';
 
 class FinancesEstablishment extends StatefulWidget {
   const FinancesEstablishment({super.key});
@@ -20,11 +21,11 @@ class _FinancesEstablishmentState extends State<FinancesEstablishment> {
 
   @override
   Widget build(BuildContext context) {
-    List<double> _currentData = _currentPeriod == 'monthly'
+    List<double> currentData = _currentPeriod == 'monthly'
         ? _monthlyData
         : (_currentPeriod == 'weekly' ? _weeklyData : _dailyData);
 
-    double _currentProfit = _currentPeriod == 'monthly'
+    double currentProfit = _currentPeriod == 'monthly'
         ? _monthlyProfit
         : (_currentPeriod == 'weekly' ? _weeklyProfit : _dailyProfit);
 
@@ -43,9 +44,7 @@ class _FinancesEstablishmentState extends State<FinancesEstablishment> {
               ),
               const SizedBox(height: 5),
               Text(
-                "data: ${DateTime.now().day.toString().padLeft(2, '0')}/"
-                "${DateTime.now().month.toString().padLeft(2, '0')}/"
-                "${DateTime.now().year}",
+                "data: ${DateFormat('dd/MM/yyyy').format(DateTime.now().toLocal())}",
                 style: const TextStyle(fontSize: 14),
               ),
               const SizedBox(height: 20),
@@ -114,12 +113,12 @@ class _FinancesEstablishmentState extends State<FinancesEstablishment> {
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 10),
-                    Text("Serviços: ${_currentData[0]}"),
-                    Text("Atendimentos: ${_currentData[1]}"),
-                    Text("Avulsos: ${_currentData[2]}"),
+                    Text("Serviços: ${currentData[0]}"),
+                    Text("Atendimentos: ${currentData[1]}"),
+                    Text("Avulsos: ${currentData[2]}"),
                     const Divider(color: Colors.black),
                     Text(
-                      "Lucro Total: R\$ $_currentProfit", // Altere esta linha
+                      "Lucro Total: R\$ $currentProfit", // Altere esta linha
                       style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
@@ -141,17 +140,17 @@ class _FinancesEstablishmentState extends State<FinancesEstablishment> {
                             PieChartData(
                               sections: [
                                 PieChartSectionData(
-                                  value: _currentData[0],
+                                  value: currentData[0],
                                   color: Colors.green,
                                   radius: 50,
                                 ),
                                 PieChartSectionData(
-                                  value: _currentData[1],
+                                  value: currentData[1],
                                   color: Colors.blue,
                                   radius: 50,
                                 ),
                                 PieChartSectionData(
-                                  value: _currentData[2],
+                                  value: currentData[2],
                                   color: Colors.yellow,
                                   radius: 50,
                                 ),
@@ -172,11 +171,11 @@ class _FinancesEstablishmentState extends State<FinancesEstablishment> {
                                 height: 20,
                                 color: Colors.green,
                               ),
-                              SizedBox(width: 5),
-                              Text('Serviços'),
+                              const SizedBox(width: 5),
+                              const Text('Serviços'),
                             ],
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           Row(
                             children: [
                               Container(
@@ -184,11 +183,11 @@ class _FinancesEstablishmentState extends State<FinancesEstablishment> {
                                 height: 20,
                                 color: Colors.blue,
                               ),
-                              SizedBox(width: 5),
-                              Text('Atendimentos'),
+                              const SizedBox(width: 5),
+                              const Text('Atendimentos'),
                             ],
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           Row(
                             children: [
                               Container(
@@ -196,14 +195,14 @@ class _FinancesEstablishmentState extends State<FinancesEstablishment> {
                                 height: 20,
                                 color: Colors.yellow,
                               ),
-                              SizedBox(width: 5),
-                              Text('Avulsos'),
+                              const SizedBox(width: 5),
+                              const Text('Avulsos'),
                             ],
                           ),
                         ],
                       ),
                       const SizedBox(
-                        width: 100,
+                        width: 50,
                       )
                     ],
                   ),
