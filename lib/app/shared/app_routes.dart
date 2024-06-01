@@ -11,4 +11,9 @@ abstract class AppRoutes {
   static const financesEstablishment = '/finances_establishment';
   static const requestsEstablishment = '/requests_establishment';
   static const profileEstablishment = '/profile_establishment';
+  static const detailsLavajato = '/details_lavajato';
+  static const servicePage = '/service_page';
+  static const payment = '/payment';
+  static const adress = '/adress';
+  static const confirmation = '/confirmation_page';
 }

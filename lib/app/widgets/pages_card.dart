@@ -21,7 +21,7 @@ class PageCard extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.only(bottom: 1.0),
         padding: const EdgeInsets.symmetric(
-          vertical: 20.0,
+          vertical: 10.0,
         ),
         width: MediaQuery.of(context).size.width * 0.3,
         decoration: BoxDecoration(

@@ -1,14 +1,44 @@
 import 'package:flutter/material.dart';
-
 import 'package:ijato/app/shared/navigation_provider.dart';
 import 'package:ijato/app/widgets/pages_card.dart';
 import 'package:provider/provider.dart';
+import 'package:ijato/app/widgets/results_bar.dart';
+import 'package:ijato/app/widgets/avaliation.dart';
+import 'package:ijato/app/widgets/service_bar.dart';
+import 'package:ijato/app/widgets/services_from_estab.dart'; // Novo import
 
 class HomeEstablishment extends StatelessWidget {
   const HomeEstablishment({super.key});
 
   @override
   Widget build(BuildContext context) {
+    List<Map<String, String>> services = [
+      {
+        "title": "Higienização Simples",
+        "date": "30/05/2024",
+        "time": "09:00",
+        "status": "Pago",
+      },
+      {
+        "title": "Polimento",
+        "date": "29/05/2024",
+        "time": "16:00",
+        "status": "Pendente",
+      },
+      {
+        "title": "Higienização Simples",
+        "date": "29/05/2024",
+        "time": "14:00",
+        "status": "Pago",
+      },
+      {
+        "title": "Higienização Completa",
+        "date": "29/05/2024",
+        "time": "11:00",
+        "status": "Pago",
+      },
+    ];
+
     return Scaffold(
       body: Stack(
         children: [
@@ -23,11 +53,58 @@ class HomeEstablishment extends StatelessWidget {
                         const Text(
                           "Meu estabelecimento:",
                           style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'Popins'),
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Popins',
+                          ),
                         ),
-                        const SizedBox(height: 5),
+                        const SizedBox(height: 10),
+                        Column(
+                          children: [
+                            ResultsBar(
+                              barColor: const Color(0xff6672B4),
+                              establishmentName: "VipCar",
+                              avaliation: const Avaliation(number: "4.9"),
+                              serviceBar: ServiceBar(
+                                icon: const Icon(Icons.house),
+                                icon2: const Icon(Icons.sync_alt),
+                                iconOn: const Icon(
+                                  Icons.radio_button_checked,
+                                  color: Colors.green,
+                                ),
+                                weekDays: Week(
+                                  days: "D",
+                                  openday: Colors.grey,
+                                ),
+                                weekDays1: Week(
+                                  days: "S",
+                                  openday: Colors.green,
+                                ),
+                                weekDays2: Week(
+                                  days: "T",
+                                  openday: Colors.green,
+                                ),
+                                weekDays3: Week(
+                                  days: "Q",
+                                  openday: Colors.green,
+                                ),
+                                weekDays4: Week(
+                                  days: "Q",
+                                  openday: Colors.green,
+                                ),
+                                weekDays5: Week(
+                                  days: "S",
+                                  openday: Colors.green,
+                                ),
+                                weekDays6: Week(
+                                  days: "S",
+                                  openday: Colors.grey,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 20),
                         SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
                           child: Row(
@@ -90,130 +167,20 @@ class HomeEstablishment extends StatelessWidget {
                                   left:
                                       10.0), // Ajuste o valor conforme necessário
                               child: Text(
-                                "Serviços finalizados recentemente:",
+                                "Últimos serviços feitos:",
                                 textAlign: TextAlign.left,
                                 style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'Poppins'),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Poppins',
+                                ),
                               ),
                             ),
                           ],
                         ),
                         const SizedBox(height: 5),
-                        const Flexible(
-                          child: SingleChildScrollView(
-                            scrollDirection: Axis.vertical,
-                            child: SafeArea(
-                              child: Column(
-                                children: [
-                                  SizedBox(
-                                    width: 500,
-                                    height: 80,
-                                    child: Card(
-                                      color: Color.fromRGBO(110, 112, 128, 1),
-                                      child: Center(
-                                        child: Text(
-                                          "Serviço 1",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 18,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(height: 2),
-                                  SizedBox(
-                                    width: 500,
-                                    height: 80,
-                                    child: Card(
-                                      color: Color.fromRGBO(110, 112, 128, 1),
-                                      child: Center(
-                                        child: Text(
-                                          "Serviço 2",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 18,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(height: 2),
-                                  SizedBox(
-                                    width: 500,
-                                    height: 80,
-                                    child: Card(
-                                      color: Color.fromRGBO(110, 112, 128, 1),
-                                      child: Center(
-                                        child: Text(
-                                          "Serviço 3",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 18,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(height: 2),
-                                  SizedBox(
-                                    width: 500,
-                                    height: 80,
-                                    child: Card(
-                                      color: Color.fromRGBO(110, 112, 128, 1),
-                                      child: Center(
-                                        child: Text(
-                                          "Serviço 4",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 18,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(height: 2),
-                                  SizedBox(
-                                    width: 500,
-                                    height: 80,
-                                    child: Card(
-                                      color: Color.fromRGBO(110, 112, 128, 1),
-                                      child: Center(
-                                        child: Text(
-                                          "Serviço 5",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 18,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(height: 2),
-                                  SizedBox(
-                                    width: 500,
-                                    height: 80,
-                                    child: Card(
-                                      color: Color.fromRGBO(110, 112, 128, 1),
-                                      child: Center(
-                                        child: Text(
-                                          "Serviço 5",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 18,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        )
-                      ],
+                        ServicesFromEstab(
+                            services: services),                      ],
                     ),
                   ),
                 ],
