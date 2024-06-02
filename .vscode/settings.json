@@ -3,5 +3,6 @@
         "ijato"
     ],
     "cmake.configureOnOpen": true,
-    "cmake.sourceDirectory": "C:/dev/ijato/projetoIntegrador/windows"
+    "cmake.sourceDirectory": "C:/dev/ijato/projetoIntegrador/windows",
+    "cmake.ignoreCMakeListsMissing": true
 }

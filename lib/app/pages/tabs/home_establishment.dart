@@ -59,46 +59,46 @@ class HomeEstablishment extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 10),
-                        const Column(
+                        Column(
                           children: [
                             ResultsBar(
-                              barColor: Color(0xff6672B4),
+                              barColor: const Color(0xff6672B4),
                               establishmentName: "VipCar",
-                              avaliation: Avaliation(number: "4.9"),
+                              avaliation: const Avaliation(number: "4.9"),
                               serviceBar: ServiceBar(
-                                icon: Icon(Icons.house),
-                                icon2: Icon(Icons.sync_alt),
-                                iconOn: Icon(
+                                icon: const Icon(Icons.house),
+                                icon2: const Icon(Icons.sync_alt),
+                                iconOn: const Icon(
                                   Icons.radio_button_checked,
                                   color: Colors.green,
                                 ),
                                 weekDays: Week(
                                   days: "D",
-                                  openDay: Colors.grey,
+                                  openday: Colors.grey,
                                 ),
                                 weekDays1: Week(
                                   days: "S",
-                                  openDay: Colors.green,
+                                  openday: Colors.green,
                                 ),
                                 weekDays2: Week(
                                   days: "T",
-                                  openDay: Colors.green,
+                                  openday: Colors.green,
                                 ),
                                 weekDays3: Week(
                                   days: "Q",
-                                  openDay: Colors.green,
+                                  openday: Colors.green,
                                 ),
                                 weekDays4: Week(
                                   days: "Q",
-                                  openDay: Colors.green,
+                                  openday: Colors.green,
                                 ),
                                 weekDays5: Week(
                                   days: "S",
-                                  openDay: Colors.green,
+                                  openday: Colors.green,
                                 ),
                                 weekDays6: Week(
                                   days: "S",
-                                  openDay: Colors.grey,
+                                  openday: Colors.grey,
                                 ),
                               ),
                             ),
@@ -165,7 +165,7 @@ class HomeEstablishment extends StatelessWidget {
                             Padding(
                               padding: EdgeInsets.only(
                                   left:
-                                      10.0), // Ajuste o valor conforme necessário
+                                      10.0),
                               child: Text(
                                 "Últimos serviços feitos:",
                                 textAlign: TextAlign.left,
