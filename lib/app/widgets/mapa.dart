@@ -26,19 +26,19 @@ class Mapa extends StatelessWidget {
         const MarkerLayer(
           markers: [
             Marker(
-              point: const LatLng(-7.2198444, -39.3018349),
+              point: const LatLng(-7.2195934, -39.301558),
               child: VipcarImage(),
               width: 80.0,
               height: 80.0,
             ),
             Marker(
-              point: const LatLng(-7.2192339, -39.2977571),
+              point: const LatLng(-7.219135, -39.297377),
               child: WjImage(),
               width: 80.0,
               height: 80.0,
             ),
             Marker(
-              point: const LatLng(-7.2208259, -39.2984149),
+              point: const LatLng(-7.220947, -39.296650),
               child: JaguarImage(),
               width: 80.0,
               height: 80.0,
