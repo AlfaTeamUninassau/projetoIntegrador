@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ijato/app/shared/app_routes.dart';
+import 'package:ijato/app/widgets/adress_container.dart';
 import 'package:ijato/app/widgets/appbar_home.dart';
 import 'package:ijato/app/widgets/avatar.dart';
+import 'package:ijato/app/widgets/check_box.dart';
 import 'package:ijato/app/widgets/logo.dart';
 import 'package:ijato/app/widgets/services_main_container.dart';
 import 'package:ijato/app/widgets/user_buttons.dart';
@@ -16,52 +18,89 @@ class Adress extends StatelessWidget {
         children: [
           const SizedBox(height: 175, child: AppbarHome()),
           SafeArea(
-              child: Column(
-            children: [
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: const Column(
-                  children: [
-                    SizedBox(height: 20),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SizedBox(
-                          width: 100,
-                          height: 100,
-                          child: LogoImage(),
-                        ),
-                        SizedBox(
-                          width: 100,
-                          height: 100,
-                          child: AvatarImage(),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 20),
-                  ],
+            child: Column(
+              children: [
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: const Column(
+                    children: [
+                      SizedBox(height: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          SizedBox(
+                            width: 100,
+                            height: 100,
+                            child: LogoImage(),
+                          ),
+                          SizedBox(
+                            width: 100,
+                            height: 100,
+                            child: AvatarImage(),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 20),
+                    ],
+                  ),
                 ),
-              ),
-              Column(
-                children: [
-                  SingleChildScrollView(
+                Expanded(
+                  child: SingleChildScrollView(
                     child: Column(
                       children: [
                         Container(
-                          margin: EdgeInsets.only(right: 13, left: 13),
-                          padding: EdgeInsets.only(
-                              right: 14, left: 14, top: 8, bottom: 14),
+                          margin: EdgeInsets.symmetric(horizontal: 13),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 14, vertical: 14),
                           decoration: BoxDecoration(
                             color: Color.fromRGBO(102, 114, 180, 1.0),
                             borderRadius: BorderRadius.circular(5),
                           ),
                           child: Column(
-                            children: [ServicesMainContainer()],
+                            children: [
+                              ServicesMainContainer(),
+                              Text(
+                                'Endereço',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15,
+                                ),
+                              ),
+                              SizedBox(height: 7),
+                              Container(
+                                padding: EdgeInsets.symmetric(horizontal: 7),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                child: Column(
+                                  children: [
+                                    SizedBox(height: 80),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        CheckBox(),
+                                        MyHouse(),
+                                      ],
+                                    ),
+                                    SizedBox(height: 35),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        CheckBox(),
+                                        MyLocation(),
+                                      ],
+                                    ),
+                                    SizedBox(height: 70),
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                        SizedBox(
-                          height: 13,
-                        ),
+                        SizedBox(height: 13),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -71,27 +110,27 @@ class Adress extends StatelessWidget {
                                     context, AppRoutes.servicePage);
                               },
                             ),
-                            SizedBox(
-                              width: 21,
-                            ),
+                            SizedBox(width: 21),
                             NextButton(
-                                nextbuttonName: 'Próximo',
-                                onPressed: () {
-                                  Navigator.pushNamed(
-                                      context, AppRoutes.payment);
-                                }),
+                              nextbuttonName: 'Próximo',
+                              onPressed: () {
+                                Navigator.pushNamed(context, AppRoutes.payment);
+                              },
+                            ),
                           ],
                         ),
+                        SizedBox(
+                          height: 13,
+                        )
                       ],
                     ),
-                  )
-                ],
-              )
-            ],
-          ))
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
-    ;
   }
 }
