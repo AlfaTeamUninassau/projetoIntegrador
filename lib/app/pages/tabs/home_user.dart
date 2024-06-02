@@ -96,7 +96,7 @@ class HomePage extends StatelessWidget {
                             weekDays6: Week(days: "S", openday: Colors.green),
                           )),
                       ResultsBar(
-                          establishmentName: "FastJato",
+                          establishmentName: "Jaguar Lava Car",
                           avaliation: const Avaliation(number: "4.0"),
                           serviceBar: ServiceBar(
                             icon: const Icon(Icons.house),

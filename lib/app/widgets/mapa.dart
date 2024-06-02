@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:ijato/app/shared/app_images.dart';
+import 'package:ijato/app/widgets/logo.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_map_cancellable_tile_provider/flutter_map_cancellable_tile_provider.dart';
 
 class Mapa extends StatelessWidget {
   const Mapa({super.key});
@@ -18,29 +21,25 @@ class Mapa extends StatelessWidget {
           urlTemplate:
               'https://api.mapbox.com/styles/v1/hasura/clwwsnlwg05wx01qlgbp25uec/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaGFzdXJhIiwiYSI6ImNsd3dzbDdyZTEzOWQya3E3Mjdlc2cxeXUifQ.xva1j2OgcYSoN2zP5Oq2XA',
           subdomains: const ['a', 'b', 'c'],
-          userAgentPackageName: 'com.example.app',
+          userAgentPackageName: 'com.ijato.app',
         ),
-        const MarkerLayer(
+        MarkerLayer(
           markers: [
             Marker(
-              point: LatLng(-7.219818, -39.301607),
-              child: Icon(Icons.location_pin,
-                  color: Color.fromARGB(255, 98, 183, 252), size: 50),
+              point: LatLng(-7.2198444, -39.3018349),
+              child: Image.asset(AppImages.locale),
               width: 80.0,
               height: 80.0,
             ),
             Marker(
-              point: LatLng(-7.219348, -39.300134),
-              child: Icon(Icons.location_pin,
-                  color: Color.fromARGB(255, 157, 205, 244), size: 40),
+              point: LatLng(-7.2192339, -39.2977571),
+              child: Image.asset(AppImages.locale1),
               width: 80.0,
               height: 80.0,
-              
             ),
             Marker(
-              point: LatLng(-7.2204134, -39.2980741),
-              child: Icon(Icons.location_pin,
-                  color: Color.fromARGB(255, 157, 205, 244), size: 40),
+              point: LatLng(-7.2208259, -39.2984149),
+              child: Image.asset(AppImages.locale2),
               width: 80.0,
               height: 80.0,
             ),
