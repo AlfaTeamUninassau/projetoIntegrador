@@ -119,10 +119,17 @@ class HomePage extends StatelessWidget {
                       const SizedBox(
                         height: 12,
                       ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                            12), // ajuste este valor conforme necessário
+                        child: const SizedBox(
+                          height: 375,
+                          width: 402,
+                          child: Mapa(),
+                        ),
+                      ),
                       const SizedBox(
-                        height: 375,
-                        width: 402,
-                        child: Mapa(),
+                        height: 10,
                       )
                     ],
                   )
