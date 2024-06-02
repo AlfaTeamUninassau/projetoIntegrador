@@ -40,11 +40,13 @@ class ServicesMainContainer extends StatelessWidget {
 }
 
 class ServiceChekBox extends StatelessWidget {
-  final String serviceName;
-  final String serviceDescription;
-  final String price;
+  final List<String> serviceName;
+  final List<String> serviceDescription;
+  final int descriptionIndex;
+  final List<String> price;
 
   const ServiceChekBox({
+    required this.descriptionIndex,
     required this.price,
     required this.serviceDescription,
     Key? key,
@@ -70,12 +72,11 @@ class ServiceChekBox extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  serviceName,
+                  serviceName[descriptionIndex],
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
                 ),
-                SizedBox(height: 5), // Adicione um espaçamento entre os textos
                 Text(
-                  serviceDescription,
+                  serviceDescription[descriptionIndex],
                   style: TextStyle(fontSize: 10),
                   softWrap:
                       true, // Permitir que o texto quebre em várias linhas
@@ -103,7 +104,7 @@ class ServiceChekBox extends StatelessWidget {
                   color: Colors.green,
                 ),
                 Text(
-                  price,
+                  price[descriptionIndex],
                   style: TextStyle(fontWeight: FontWeight.bold),
                 )
               ],

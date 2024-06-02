@@ -7,4 +7,7 @@ abstract class AppImages {
   //user images
   static const String avatar = 'assets/images/user/avatar.png';
   static const String mapa = 'assets/images/app/mapa.png';
+  static const String pixlogo = 'assets/images/app/logo-pix.png';
+  static const String credCard = 'assets/images/app/credit_card_outlined.png';
+  static const String money = 'assets/images/app/local_atm.png';
 }

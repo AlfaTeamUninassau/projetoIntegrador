@@ -114,7 +114,10 @@ class Adress extends StatelessWidget {
                             NextButton(
                               nextbuttonName: 'Próximo',
                               onPressed: () {
-                                Navigator.pushNamed(context, AppRoutes.payment);
+                                Navigator.pushNamed(
+                                  context,
+                                  AppRoutes.payment,
+                                );
                               },
                             ),
                           ],
