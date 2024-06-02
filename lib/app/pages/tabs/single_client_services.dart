@@ -10,6 +10,7 @@ class SingleClientServices extends StatefulWidget {
 class _SingleClientServicesState extends State<SingleClientServices> {
   bool isButtonCarPressed = false;
   bool isButtonMotorcyclePressed = false;
+  bool isChecked = false;
 
   void _toggleButtonCar() {
     setState(() {
@@ -37,12 +38,18 @@ class _SingleClientServicesState extends State<SingleClientServices> {
           SafeArea(
             child: Center(
               child: Container(
-                width: 380,
+                width: 370,
                 height: 700,
-                color: const Color.fromRGBO(201, 201, 201, 0.788),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.black,
+                  ),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                //color: const Color.fromRGBO(201, 201, 201, 0.788),
                 child: Column(
                   children: [
-                    const SizedBox(height: 10),
+                    const SizedBox(height: 4),
                     Column(
                       children: [
                         const Text(
@@ -50,22 +57,29 @@ class _SingleClientServicesState extends State<SingleClientServices> {
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.bold),
                         ),
-                        const SizedBox(height: 10),
-                        const TextField(
-                          decoration: InputDecoration(
-                            labelText: 'Nome do Cliente',
-                            fillColor: Colors.white,
-                            filled: true,
-                            border: OutlineInputBorder(),
+                        const SizedBox(height: 4),
+                        SizedBox(
+                          width: 350,
+                          child: TextFormField(
+                            decoration: const InputDecoration(
+                              labelText: 'Nome do Cliente',
+                              fillColor: Colors.white,
+                              filled: true,
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(10),
+                                ),
+                              ),
+                            ),
                           ),
                         ),
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 4),
                         const Text(
                           'Tipo:',
                           style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.bold),
+                              fontSize: 14, fontWeight: FontWeight.bold),
                         ),
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 4),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -73,7 +87,7 @@ class _SingleClientServicesState extends State<SingleClientServices> {
                               onPressed: _toggleButtonCar,
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: isButtonCarPressed
-                                    ? const Color.fromRGBO(49, 101, 24, 1)
+                                    ? const Color.fromRGBO(34, 101, 24, 1)
                                     : const Color.fromRGBO(153, 167, 148, 1),
                               ),
                               child: const Text('Carro',
@@ -92,19 +106,20 @@ class _SingleClientServicesState extends State<SingleClientServices> {
                             ),
                           ],
                         ),
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 4),
                         const Text(
                           'Serviços:',
                           style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.bold),
+                              fontSize: 14, fontWeight: FontWeight.bold),
                         ),
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 4),
                         Container(
-                          width: 360,
+                          width: 350,
                           height: 260,
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: const Color(0xffD9D9D9),
                             border: Border.all(color: Colors.black),
+                            borderRadius: BorderRadius.circular(10),
                           ),
                           child: ListView.separated(
                             itemCount: listServices.length,
@@ -148,21 +163,111 @@ class _SingleClientServicesState extends State<SingleClientServices> {
                                   ),
                                 ),
                                 trailing: Checkbox(
-                                  value:
-                                      false, // Define o estado da caixa de seleção aqui
-                                  onChanged: (newValue) {
-                                    // Lógica para lidar com a mudança de estado da caixa de seleção
+                                  value: isChecked,
+                                  onChanged: (value) {
+                                    setState(() => isChecked = value!);
                                   },
+                                  activeColor:
+                                      const Color.fromRGBO(49, 101, 24, 1),
                                 ),
                               );
                             },
                             separatorBuilder: (context, index) {
                               return const Divider(
                                 color: Colors.white,
-                                thickness: 10,
+                                thickness: 8,
                               );
                             },
                           ),
+                        ),
+                        const SizedBox(height: 4),
+                        const Text(
+                          'Data:',
+                          style: TextStyle(
+                              fontSize: 14, fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(height: 4),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: List.generate(31, (index) {
+                              final day = index + 1;
+                              return Container(
+                                width: 75,
+                                height: 35,
+                                alignment: Alignment.center,
+                                margin: const EdgeInsets.all(8),
+                                decoration: BoxDecoration(
+                                  color: const Color.fromRGBO(153, 167, 148, 1),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Text(
+                                  '$day',
+                                  style: const TextStyle(
+                                      fontSize: 16, color: Colors.white),
+                                ),
+                              );
+                            }),
+                          ),
+                        ),
+                        //const SizedBox(height: 4),
+                        const Text(
+                          'Hora:',
+                          style: TextStyle(
+                              fontSize: 14, fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(height: 4),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: List.generate(11, (hour) {
+                              final formattedHour =
+                                  (hour + 7).toString().padLeft(2, '0');
+                              return Container(
+                                width: 75,
+                                height: 35,
+                                alignment: Alignment.center,
+                                margin: const EdgeInsets.all(8),
+                                decoration: BoxDecoration(
+                                  color: const Color.fromRGBO(153, 167, 148, 1),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Text(
+                                  '$formattedHour:00',
+                                  style: const TextStyle(color: Colors.white),
+                                ),
+                              );
+                            }),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ElevatedButton(
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor:
+                                const Color.fromARGB(255, 226, 14, 14),
+                          ),
+                          child: const Text('Cancelar',
+                              style: TextStyle(color: Colors.white)),
+                        ),
+                        const SizedBox(width: 50),
+                        ElevatedButton(
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor:
+                                const Color.fromARGB(255, 46, 14, 226),
+                          ),
+                          child: const Text('Salvar',
+                              style: TextStyle(color: Colors.white)),
                         ),
                       ],
                     ),
