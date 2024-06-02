@@ -130,7 +130,41 @@ class HomePage extends StatelessWidget {
                       ),
                       const SizedBox(
                         height: 10,
-                      )
+                      ),
+                      BottomNavigationBar(
+            items: const [
+              BottomNavigationBarItem(
+                activeIcon: Icon(Icons.home_outlined),
+                backgroundColor: Color.fromARGB(251, 0, 0, 0),
+                icon: Icon(Icons.home),
+                label: 'Início',
+              ),
+              BottomNavigationBarItem(
+                activeIcon: Icon(Icons.calendar_month_outlined),
+                backgroundColor: Color.fromARGB(255, 207, 24, 11),
+                icon: Icon(Icons.calendar_month_rounded),
+                label: 'Agenda',
+              ),
+              BottomNavigationBarItem(
+                activeIcon: Icon(Icons.construction_outlined),
+                backgroundColor: Color.fromARGB(255, 63, 63, 63),
+                icon: Icon(Icons.construction),
+                label: 'Serviços',
+              ),
+              BottomNavigationBarItem(
+                activeIcon: Icon(Icons.monetization_on_outlined),
+                backgroundColor: Color.fromARGB(255, 5, 160, 44),
+                icon: Icon(Icons.monetization_on),
+                label: 'Financeiro',
+              ),
+              BottomNavigationBarItem(
+                activeIcon: Icon(Icons.shopping_cart_outlined),
+                backgroundColor: Color.fromARGB(255, 13, 26, 196),
+                icon: Icon(Icons.shopping_cart),
+                label: 'Pedidos',
+              ),
+            ],
+          ),
                     ],
                   )
                 ],
