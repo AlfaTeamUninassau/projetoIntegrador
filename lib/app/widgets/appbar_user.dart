@@ -5,8 +5,8 @@ import 'package:ijato/app/widgets/avatar.dart';
 import 'package:ijato/app/widgets/logo.dart';
 import 'package:ijato/app/widgets/establishment_photo.dart';
 
-class AppbarHome extends StatelessWidget implements PreferredSizeWidget {
-  const AppbarHome({super.key});
+class AppbarUser extends StatelessWidget implements PreferredSizeWidget {
+  const AppbarUser({super.key});
 
   @override
   Size get preferredSize => const Size.fromHeight(135.0);
@@ -28,7 +28,7 @@ class AppbarHome extends StatelessWidget implements PreferredSizeWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(width: 100, height: 100, child: LogoImage()),
-          SizedBox(width: 100, height: 100, child: EstablishmentImage())
+          SizedBox(width: 100, height: 100, child: AvatarImage())
         ],
       ),
     );

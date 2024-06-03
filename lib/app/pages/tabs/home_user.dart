@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ijato/app/widgets/appbar_user.dart';
 import 'package:ijato/app/widgets/results_bar.dart';
 import 'package:ijato/app/widgets/appbar_home.dart';
 import 'package:ijato/app/widgets/research_field.dart';
@@ -19,7 +20,7 @@ class HomePage extends StatelessWidget {
           children: [
             Column(
               children: [
-                const SizedBox(height: 100, child: AppbarHome()),
+                const SizedBox(height: 100, child: AppbarUser()),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: const Column(

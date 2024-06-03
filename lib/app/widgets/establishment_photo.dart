@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:ijato/app/shared/app_images.dart';
 import 'package:ijato/app/shared/app_routes.dart';
 
-class AvatarImage extends StatelessWidget {
-  const AvatarImage({super.key});
+class EstablishmentImage extends StatelessWidget {
+  const EstablishmentImage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,10 +14,10 @@ class AvatarImage extends StatelessWidget {
         shadowColor: WidgetStatePropertyAll(Colors.transparent),
       ),
       child: Image.asset(
-        AppImages.avatar,
+        AppImages.establishment_photo,
       ),
       onPressed: () {
-        Navigator.pushNamed(context, AppRoutes.profileUser);
+        Navigator.pushNamed(context, AppRoutes.profileEstablishment);
       },
     );
   }

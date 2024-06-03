@@ -12,4 +12,7 @@ abstract class AppImages {
       'assets/images/app/scheduling_process.png';
   // user images
   static const String avatar = 'assets/images/user/avatar.png';
+  // establishment images
+  static const String establishment_photo =
+      'assets/images/app/establishment.png';
 }

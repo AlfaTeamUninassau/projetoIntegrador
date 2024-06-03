@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:ijato/app/widgets/avatar.dart';
 
 import 'package:ijato/app/widgets/logo.dart';
 import 'package:ijato/app/widgets/establishment_photo.dart';
 
-class ProfileEstablishment extends StatelessWidget {
-  const ProfileEstablishment({super.key});
+class ProfileUser extends StatelessWidget {
+  const ProfileUser({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Perfil da Empresa"),
+        title: const Text("Perfil de Usuário"),
       ),
       body: Container(
         padding: const EdgeInsets.all(20),
@@ -25,7 +26,7 @@ class ProfileEstablishment extends StatelessWidget {
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    EstablishmentImage(),
+                    AvatarImage(),
                   ],
                 ),
                 const SizedBox(height: 20),
