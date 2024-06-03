@@ -9,14 +9,14 @@ class ServicesMainContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         MainRow(
             establishmentName: 'vipCar', avaliation: Avaliation(number: '4.9')),
         ServiceBar(
-          icon: const Icon(Icons.house),
-          icon2: const Icon(Icons.sync_alt),
-          iconOn: const Icon(
+          icon: Icon(Icons.house),
+          icon2: Icon(Icons.sync_alt),
+          iconOn: Icon(
             Icons.radio_button_checked,
             color: Colors.green,
           ),
@@ -49,9 +49,9 @@ class ServiceChekBox extends StatelessWidget {
     required this.descriptionIndex,
     required this.price,
     required this.serviceDescription,
-    Key? key,
+    super.key,
     required this.serviceName,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -61,11 +61,11 @@ class ServiceChekBox extends StatelessWidget {
         color: Colors.grey,
         borderRadius: BorderRadius.circular(5),
       ),
-      padding: EdgeInsets.only(right: 7, left: 17, top: 6, bottom: 11),
+      padding: const EdgeInsets.only(right: 7, left: 17, top: 6, bottom: 11),
       child: Row(
         children: [
-          CheckBox(), // Seu widget CheckBox aqui
-          SizedBox(
+          const CheckBox(), // Seu widget CheckBox aqui
+          const SizedBox(
               width: 10), // Adicione um espaçamento entre o CheckBox e o texto
           Expanded(
             child: Column(
@@ -73,11 +73,11 @@ class ServiceChekBox extends StatelessWidget {
               children: [
                 Text(
                   serviceName[descriptionIndex],
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
                 ),
                 Text(
                   serviceDescription[descriptionIndex],
-                  style: TextStyle(fontSize: 10),
+                  style: const TextStyle(fontSize: 10),
                   softWrap:
                       true, // Permitir que o texto quebre em várias linhas
                   overflow: TextOverflow
@@ -86,11 +86,11 @@ class ServiceChekBox extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 16,
           ),
           Container(
-            padding: EdgeInsetsDirectional.only(top: 6, bottom: 6),
+            padding: const EdgeInsetsDirectional.only(top: 6, bottom: 6),
             width: 56,
             height: 57,
             decoration: BoxDecoration(
@@ -99,13 +99,13 @@ class ServiceChekBox extends StatelessWidget {
             ),
             child: Column(
               children: [
-                Icon(
+                const Icon(
                   Icons.attach_money,
                   color: Colors.green,
                 ),
                 Text(
                   price[descriptionIndex],
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontWeight: FontWeight.bold),
                 )
               ],
             ),

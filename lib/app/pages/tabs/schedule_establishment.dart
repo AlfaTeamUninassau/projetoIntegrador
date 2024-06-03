@@ -58,7 +58,6 @@ class ScheduleEstablishment extends StatelessWidget {
                           ),
 
                           const SizedBox(height: 20),
-                          // Adicione mais ExpandableCard se necessário
                         ],
                       ),
                     ),

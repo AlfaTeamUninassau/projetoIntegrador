@@ -59,16 +59,16 @@ class HomeEstablishment extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 10),
-                        Column(
+                        const Column(
                           children: [
                             ResultsBar(
-                              barColor: const Color(0xff6672B4),
+                              barColor: Color(0xff6672B4),
                               establishmentName: "VipCar",
-                              avaliation: const Avaliation(number: "4.9"),
+                              avaliation: Avaliation(number: "4.9"),
                               serviceBar: ServiceBar(
-                                icon: const Icon(Icons.house),
-                                icon2: const Icon(Icons.sync_alt),
-                                iconOn: const Icon(
+                                icon: Icon(Icons.house),
+                                icon2: Icon(Icons.sync_alt),
+                                iconOn: Icon(
                                   Icons.radio_button_checked,
                                   color: Colors.green,
                                 ),
