@@ -125,6 +125,7 @@ class _ExpandableCardState extends State<ExpandableCard> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -145,7 +146,6 @@ class _ExpandableCardState extends State<ExpandableCard> {
                           textName: 'Serviço: ${widget.service.service}'),
                     ],
                   ),
-                  const SizedBox(width: 40),
                   Container(
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -153,10 +153,9 @@ class _ExpandableCardState extends State<ExpandableCard> {
                     ),
                     child: Icon(
                       Icons.directions_car,
-                      size: MediaQuery.of(context).size.width * 0.2,
+                      size: MediaQuery.of(context).size.width * 0.25,
                     ),
                   ),
-                  const Spacer(),
                 ],
               ),
               const SizedBox(height: 11.0),
