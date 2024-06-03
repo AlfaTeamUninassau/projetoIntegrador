@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ijato/app/widgets/appbar_home.dart';
 import 'package:ijato/app/widgets/appbar_user.dart';
 
 class AppScaffoldUSer extends StatelessWidget {

@@ -23,6 +23,12 @@ import 'package:ijato/app/pages/login.dart';
 import 'package:ijato/app/pages/tabs/services_establishment.dart';
 import 'package:ijato/app/pages/tabs/finances_establishment.dart';
 import 'package:ijato/app/pages/tabs/requests_establishment.dart';
+import 'package:ijato/app/pages/tabs/confirmation_page.dart';
+import 'package:ijato/app/pages/tabs/payment.dart';
+import 'package:ijato/app/pages/tabs/adress.dart';
+
+import 'package:ijato/app/pages/tabs/service_page.dart';
+import 'package:ijato/app/pages/tabs/details_lavajato.dart';
 
 import 'pages/register.dart';
 
@@ -39,7 +45,7 @@ class AppWidget extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: AppRoutes.appNavigationEstablishment,
+        initialRoute: AppRoutes.index,
         routes: {
           AppRoutes.appNavigationEstablishment: (ctx) =>
               const AppNavigationEstablishment(),
@@ -47,6 +53,11 @@ class AppWidget extends StatelessWidget {
           AppRoutes.register: (ctx) => const RegisterPage(),
           AppRoutes.homeUser: (ctx) => const HomePage(),
           AppRoutes.homeEstablishment: (ctx) => const HomeEstablishment(),
+          AppRoutes.detailsLavajato: (ctx) => const DatailsPage(),
+          AppRoutes.servicePage: (ctx) => const ServicePage(),
+          AppRoutes.adress: (ctx) => const Adress(),
+          AppRoutes.payment: (ctx) => const Payment(),
+          AppRoutes.confirmation: (ctx) => const Confirmation(),
           AppRoutes.userType: (ctx) => const UserTypePage(),
           AppRoutes.establishmentReg: (ctx) => const EstablishmentReg(),
           AppRoutes.scheduleEstablishment: (ctx) =>

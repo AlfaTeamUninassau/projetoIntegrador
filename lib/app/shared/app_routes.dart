@@ -16,6 +16,9 @@ abstract class AppRoutes {
   static const payment = '/payment';
   static const adress = '/adress';
   static const appointmentConfirmation = '/appointment_confirmation';
+  static const confirmation = '/confirmation_page';
+  static const detailsLavajato = '/details_lavajato';
+
 
   static const singleClientServices = '/single_client_services';
   static const profileUser = '/profile_user';

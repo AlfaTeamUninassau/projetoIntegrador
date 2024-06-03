@@ -1,8 +1,6 @@
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:ijato/app/controllers/schedule_controller.dart';
-import 'package:ijato/app/shared/app_routes.dart';
 import 'package:ijato/app/widgets/schedule_cards.dart';
 import 'package:provider/provider.dart';
 import 'package:ijato/app/pages/tabs/single_client_services.dart';
@@ -94,7 +92,7 @@ class ScheduleEstablishment extends StatelessWidget {
                                           borderRadius:
                                               BorderRadius.circular(20),
                                         ),
-                                        child: Container(
+                                        child: SizedBox(
                                           width: MediaQuery.of(context)
                                                   .size
                                                   .width *
@@ -103,7 +101,7 @@ class ScheduleEstablishment extends StatelessWidget {
                                                   .size
                                                   .height *
                                               0.8,
-                                          child: SingleClientServices(),
+                                          child: const SingleClientServices(),
                                         ),
                                       );
                                     },

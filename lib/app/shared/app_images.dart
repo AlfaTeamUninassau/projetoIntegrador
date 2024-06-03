@@ -12,6 +12,9 @@ abstract class AppImages {
       'assets/images/app/scheduling_process.png';
   // user images
   static const String avatar = 'assets/images/user/avatar.png';
+  static const String pixlogo = 'assets/images/app/logo-pix.png';
+  static const String credCard = 'assets/images/app/credit_card_outlined.png';
+  static const String money = 'assets/images/app/local_atm.png';
   // establishment images
   static const String establishment_photo =
       'assets/images/app/establishment.png';

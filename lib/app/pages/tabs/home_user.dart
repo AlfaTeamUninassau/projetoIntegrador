@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ijato/app/widgets/appbar_user.dart';
 import 'package:ijato/app/widgets/results_bar.dart';
-import 'package:ijato/app/widgets/appbar_home.dart';
 import 'package:ijato/app/widgets/research_field.dart';
 import 'package:ijato/app/widgets/favoritos.dart';
 import 'package:ijato/app/widgets/avaliation.dart';

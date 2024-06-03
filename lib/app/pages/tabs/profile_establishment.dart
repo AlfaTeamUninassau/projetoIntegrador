@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:ijato/app/widgets/logo.dart';
 import 'package:ijato/app/widgets/establishment_photo.dart';
 
 class ProfileEstablishment extends StatelessWidget {

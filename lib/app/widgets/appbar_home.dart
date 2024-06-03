@@ -1,7 +1,6 @@
 import 'package:flutter/widgets.dart';
 
 import 'package:ijato/app/shared/app_images.dart';
-import 'package:ijato/app/widgets/avatar.dart';
 import 'package:ijato/app/widgets/logo.dart';
 import 'package:ijato/app/widgets/establishment_photo.dart';
 

@@ -33,7 +33,7 @@ class AppointmentConfirmation extends StatelessWidget {
                         const ServicesMainContainer(),
                         Container(
                           decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 217, 217, 217),
+                            color: const Color.fromARGB(255, 217, 217, 217),
                             borderRadius: BorderRadius.circular(5),
                           ),
                           child: Column(
@@ -61,7 +61,7 @@ class AppointmentConfirmation extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            PreviousButton(
+                            PreviusButton(
                               onPressed: () {
                                 Navigator.pushNamed(context, AppRoutes.payment);
                               },

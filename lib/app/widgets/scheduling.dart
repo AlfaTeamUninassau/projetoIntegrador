@@ -70,8 +70,8 @@ class ChekBoxScheduling extends StatelessWidget {
   final String hour;
   final bool available;
 
-  ChekBoxScheduling({required this.hour, required this.available, Key? key})
-      : super(key: key);
+  const ChekBoxScheduling(
+      {required this.hour, required this.available, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -163,19 +163,19 @@ class Scheduling extends StatefulWidget {
   final List<List<Map<String, dynamic>>> schedules;
   final Avaliation avaliation;
 
-  Scheduling({
+  const Scheduling({
     required this.avaliation,
     required this.establishmentName,
     required this.schedules,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   _SchedulingState createState() => _SchedulingState();
 }
 
 class _SchedulingState extends State<Scheduling> {
-  int selectedDay = DateTime.now().weekday - 1;
+  int selectedDay = (DateTime.now().weekday + 0) % 7;
   DateTime currentDate = DateTime.now();
 
   void selectDay(int index) {
@@ -194,13 +194,13 @@ class _SchedulingState extends State<Scheduling> {
   Widget build(BuildContext context) {
     final weekDays = ['S', 'T', 'Q', 'Q', 'S', 'S', 'D'];
     final dayColors = [
-      Colors.grey,
       Colors.green,
       Colors.green,
       Colors.green,
       Colors.green,
       Colors.green,
-      Colors.green
+      Colors.green,
+      Colors.grey
     ];
 
     return Container(
@@ -241,9 +241,7 @@ class _SchedulingState extends State<Scheduling> {
                       'Data ${getFormattedDate(currentDate)}',
                       style: const TextStyle(fontWeight: FontWeight.w300),
                     ),
-                    const SizedBox(
-                        height:
-                            8), // Espaçamento entre a data e os dias da semana
+                    const SizedBox(height: 8),
                     Center(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,

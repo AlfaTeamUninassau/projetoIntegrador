@@ -24,10 +24,10 @@ class NextButton extends StatelessWidget {
   }
 }
 
-class PreviousButton extends StatelessWidget {
+class PreviusButton extends StatelessWidget {
   final Function()? onPressed;
 
-  const PreviousButton({this.onPressed, super.key});
+  const PreviusButton({this.onPressed, super.key});
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ijato/app/widgets/avatar.dart';
 
-import 'package:ijato/app/widgets/logo.dart';
-import 'package:ijato/app/widgets/establishment_photo.dart';
 
 class ProfileUser extends StatelessWidget {
   const ProfileUser({super.key});
