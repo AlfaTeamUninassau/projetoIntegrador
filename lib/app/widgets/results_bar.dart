@@ -49,7 +49,7 @@ class _ResultsBarState extends State<ResultsBar> {
             isSelected = true;
           }
         });
-        Navigator.pushNamed(context, AppRoutes.detailsLavajato);
+        Navigator.pushNamed(context, AppRoutes.detailsEstablishment);
       },
       child: Center(
         child: Column(

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Week extends StatelessWidget {
-  String days;
-  Color openday;
+  final String days;
+  final Color openday;
 
-  Week({required this.days, super.key, required this.openday});
+  const Week({required this.days, super.key, required this.openday});
 
   @override
   Widget build(BuildContext context) {
@@ -26,18 +26,18 @@ class Week extends StatelessWidget {
 }
 
 class ServiceBar extends StatelessWidget {
-  Icon icon;
-  Icon icon2;
-  Icon iconOn;
-  Week weekDays;
-  Week weekDays1;
-  Week weekDays2;
-  Week weekDays3;
-  Week weekDays4;
-  Week weekDays5;
-  Week weekDays6;
+  final Icon icon;
+  final Icon icon2;
+  final Icon iconOn;
+  final Week weekDays;
+  final Week weekDays1;
+  final Week weekDays2;
+  final Week weekDays3;
+  final Week weekDays4;
+  final Week weekDays5;
+  final Week weekDays6;
 
-  ServiceBar({
+  const ServiceBar({
     super.key,
     required this.icon,
     required this.icon2,

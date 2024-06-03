@@ -163,9 +163,7 @@ class HomeEstablishment extends StatelessWidget {
                         const Row(
                           children: <Widget>[
                             Padding(
-                              padding: EdgeInsets.only(
-                                  left:
-                                      10.0),
+                              padding: EdgeInsets.only(left: 10.0),
                               child: Text(
                                 "Últimos serviços feitos:",
                                 textAlign: TextAlign.left,
