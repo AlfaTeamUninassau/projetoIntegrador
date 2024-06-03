@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ijato/app/controllers/solicitation_controller.dart';
 import 'package:ijato/app/pages/tabs/profile_establishment.dart';
+import 'package:ijato/app/pages/tabs/single_client_services.dart';
 import 'package:provider/provider.dart';
 
 import 'package:ijato/app/controllers/user_controller.dart';
@@ -32,7 +33,7 @@ class AppWidget extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: AppRoutes.appNavigationEstablishment,
+        initialRoute: AppRoutes.index,
         routes: {
           AppRoutes.appNavigationEstablishment: (ctx) =>
               const AppNavigationEstablishment(),
@@ -51,6 +52,7 @@ class AppWidget extends StatelessWidget {
           AppRoutes.requestsEstablishment: (ctx) =>
               const RequestsEstablishment(),
           AppRoutes.profileEstablishment: (ctx) => const ProfileEstablishment(),
+          AppRoutes.singleClientServices: (ctx) => const SingleClientServices(),
         },
       ),
     );
